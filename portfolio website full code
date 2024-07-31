@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Shubh Kalaria</title>
+
+    <style>
+        body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    padding: 50px;
+    flex-direction: column;
+}
+
+.color {
+    color: #FFFF00;
+}
+
+.color1 {
+    color: #FF0000;
+}
+
+.color2 {
+    color: #007acc;
+}
+
+.content-container {
+    flex: 1;
+    padding-left: 10px;
+}
+
+#about-me {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justify;
+    text-size-adjust: 10px;
+    margin-bottom: 5%;
+}
+
+nav {
+    background-color: #2c2b2b;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 70px;
+    margin-left: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+    border-radius: 55%;
+}
+
+.logo-text {
+    color: #ffffff;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+    margin-left: 10px;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #007acc;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 50px 40px;
+}
+
+.about-me {
+    background-color: #000000;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+    transition: transform 0.3s;
+}
+
+.skill img {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.skill:hover img {
+    transform: scale(1.1);
+}
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-box {
+    background-color: #252526;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+    background-color: #252526;
+}
+
+.project-box h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.project-box p {
+    margin-bottom: 20px;
+}
+
+.view-code-button {
+    background-color: #007acc;
+    color: #ffffff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.view-code-button:hover {
+    background-color: #ffffff;
+    color: #007acc;
+}
+
+.animated-button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.animated-button:hover {
+    background-color: #ffffff;
+    color: #2c2b2b;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+footer.footer {
+    background-color: #252526;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: transform 0.3s, filter 0.3s; /* Updated: Added transition */
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Updated: Increased scale on hover */
+    filter: brightness(1.2); /* Updated: Increased brightness on hover */
+}
+
+@media (max-width: 768px) {
+    .icon {
+        width: 25px;
+        height: 25px;
+        margin: 0 5px; /* Updated: Reduced margin for smaller screens */
+    }
+}
+
+.education img {
+    transition: transform 0.3s;
+}
+
+.education img:hover {
+    transform: scale(1.05);
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="content-container">
+    <nav>
+        <div style="display: flex; align-items: center;">
+            <img src="https://yashwadhvani.vercel.app/static/media/hacker.85d4b8055ce4937a1f2f.png" alt="Logo" class="logo">
+            <p class="logo-text">Shubh_Kalaria</p>
+        </div>
+        <div style="display: flex;">
+            <a href="#about-me"><span class="color2">About Me</span></a>
+            <a href="#education"><span class="color2">Education</span></a>
+            <a href="#skills"><span class="color2">Skills</span></a>
+            <a href="#projects"><span class="color2">Projects</span></a>
+            <a href="#experience"><span class="color2">Experience</span></a>
+        </div>
+    </nav>
+    <br>
+
+    <h1>ABOUT ME</h1>
+    <section id="about-me" class="about-me">
+        <h4>👋I'm <span class="color2">Shubh Kalaria</span>, a passionate B.Tech student majoring in Computer & Communication Engineering, proficient in full-stack web development & deep learning techniques. Skilled in HTML, CSS, JavaScript, and modern frameworks, I have hands-on experience in creating dynamic websites.<br>🧑‍💻With a strong foundation in data structures, algorithms, and problem-solving, I am passionate about building user-friendly web solutions.<br>🚀My enthusiasm and strong work ethic drive me to excel in both software development and analytical thinking.</h4>
+    </section>
+
+    <h1>EDUCATION</h1>
+    <section id="education" class="education">
+        <div class="color1"><h3>Btech Computer and Communication Engineering</h3></div>
+        <img src="https://i.pinimg.com/736x/4e/62/1d/4e621dee8e12f560945230ef18c5dc6a.jpg" width="70px"><div class="color2"><h4>Manipal University Jaipur</h4></div>
+        <br>
+        <div class="color1"><h3>Higher Secondary School</h3></div>
+        <img src="https://play-lh.googleusercontent.com/zAmZ3vOouGe1GgDAc9p5REcuJVbAC7iOmJ_zKLnPVtt-Cgy0_Qxn4f2fpAru7HHQO6o=w240-h480-rw" width="70px"><div class="color2"><h4>Kameshwar Vidhyalaya</h4></div>
+        <br>
+        <div class="color1"><h3>Secondary School</h3></div>
+        <img src="https://skoodos.com/public/uploads/optimized/1681205779.jpg" width="70px"><div class="color2"><h4>The New Tulip International School</h4></div>
+    </section>
+
+    <h1>SKILLS</h1>
+    <br>
+    <section id="skills">
+        <div class="skills">
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" alt="HTML" width="500px">
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" alt="CSS" width="500px">
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" width="500px">
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" width="500px">
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" width="500px">
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" width="500px">
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" width="500px">
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <h1>PROJECTS</h1>
+    <br><br><br><br>
+    <div id = "projects">
+        <div class="projects-container">
+            <div class="project-box">
+                <div class = "color1"><h3>Personal Portfolio Website</h3></div>
+                <div class = "color"><p><br>Stack - JavaScript, React.js, MongoDB</p></div>
+                <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects and experience.</p>
+                <a href="https://github.com/ShubH9604/Personal-Portfolio-Website" class="view-code-button">View</a>
+            </div>
+            <div class="project-box">
+                <div class = "color1"><h3>Predicting Stock Prices</h3></div>
+                <div class = "color"><p><br>Stack - TensorFlow, sklearn, numpy, pandas</p></div>
+                <p>Built a machine learning model to predict stock prices based on historical trends and key financial metrics, utilizing pandas for accurate predictions.</p>
+                <a href="https://github.com/ShubH9604/Predicting-Stock-Prices" class="view-code-button">View</a>
+            </div>
+            <div class="project-box">
+                <div class = "color1"><h3>Food Calorie Recognition</h3></div>
+                <div class = "color"><p><br>Stack - TensorFlow, sklearn, keras, numpy</p></div>
+                <p>Built a model to recognize and estimate food calorie content through image recognition and utilized CNN for precise calorie estimation.</p>
+                <a href="https://github.com/ShubH9604/Food-Calorie-Recognition" class="view-code-button">View</a>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+
+    <h1>Experience</h1>
+    <section id="experience">    
+        <div class = "color1"><h2>📌 ACADEMOR</h2></div>
+        <div class = "color2"><h3>[Web Developer Trainee & Intern]</h3></div>
+        <h4>➡️Completed web development training program focusing on HTML, CSS, and JavaScript fundamentals. Developed proficiency in frameworks such as React and Angular, gaining experience in building dynamic web applications.</h3>
+
+        <div class = "color1"><h2>📌 PRODIGY INFOTECH</h2></div>
+        <div class = "color2"><h3>[Machine Learning Intern]</h3></div>
+        <h4>➡️My machine learning internship was a transformative experience where I applied algorithms to real datasets, refining my data analysis skills ,developing predictive models and deepening my understanding of AI. </h3>
+
+        <div class = "color1"><h2>📌 ACADEMOR</h2></div>
+        <div class = "color2"><h3>[Web Developer Trainee & Intern]</h3></div>
+        <h4>➡️Completed web development training program focusing on HTML, CSS, and JavaScript fundamentals. Developed proficiency in frameworks such as React and Angular, gaining experience in building dynamic web applications.</h3>
+    </section>
+</div>
+<br>
+<footer class="footer">
+    <div class="social-icons">
+        <a href="https://github.com/ShubH9604">
+            <img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="GitHub" class="icon" width = 30px>
+        </a>
+        <a href="https://www.linkedin.com/in/shubh-kalaria09/">
+            <img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png" alt="LinkedIn" class="icon" width = 20px>
+        </a>
+        <a href="https://leetcode.com/u/shubh_sk09/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="icon" width = 35px>
+        </a>
+    </div>
+    <p>Designed & Developed by Shubh Kalaria</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const skills = document.querySelectorAll('.skill');
+        skills.forEach((skill, index) => {
+            skill.style.animationDelay = `${index * 0.2}s`;
+        });
+    });
+</script>
+</body>
+</html>
