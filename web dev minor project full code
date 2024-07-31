@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Places in India</title>>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #f28703;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .card {
+            background: rgb(255, 253, 253);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            max-width: 300px;
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .description {
+            padding: 1rem;
+            text-align: center;
+            background: #ffffff;
+            color: #333;
+        }
+
+        .place-name {
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem 0 0;
+        }
+
+        .description p {
+            margin: 0;
+        }
+
+        footer {
+            background-color: #06d11edb;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Historical Places in India</h1>
+    </header>
+    <main>
+        <section class="gallery">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/9410840/pexels-photo-9410840.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Taj Mahal">
+                <div class="description">
+                    <div class="place-name">Taj Mahal</div>
+                    <p>A symbol of love, this white marble mausoleum is a UNESCO World Heritage Site.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.indianexpress.com/2018/06/red-fort-759-getty-images.jpg" alt="Red Fort">
+                <div class="description">
+                    <div class="place-name">Red Fort</div>
+                    <p>A historic fort in Delhi that served as the main residence of the Mughal emperors.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.savaari.com/blog/wp-content/uploads/2022/08/marvin-castelino-z4GzALvJ8xs-unsplash-2-1152x1536.jpg" alt="Qutub Minar">
+                <div class="description">
+                    <div class="place-name">Qutub Minar</div>
+                    <p>The tallest brick minaret in the world, located in Delhi.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/7389639/pexels-photo-7389639.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hawa Mahal">
+                <div class="description">
+                    <div class="place-name">Hawa Mahal</div>
+                    <p>Known as the Palace of Winds, it is a stunning pink sandstone structure in Jaipur.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/19446858/pexels-photo-19446858/free-photo-of-amer-fort-in-india.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Amer Fort">
+                <div class="description">
+                    <div class="place-name">Amer Fort</div>
+                    <p>A majestic fort located in Amer, Rajasthan, known for its artistic style elements.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://img.staticmb.com/mbcontent/images/crop/uploads/2022/9/India%20Gate%20delhi_0_1200.jpg" alt="India Gate">
+                <div class="description">
+                    <div class="place-name">India Gate</div>
+                    <p>A war memorial located astride the Rajpath, Delhi.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://static.toiimg.com/photo/51010213.cms" alt="Mysore Palace">
+                <div class="description">
+                    <div class="place-name">Mysore Palace</div>
+                    <p>A historical palace in the city of Mysore, known for its grandeur.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.connectingtraveller.com/images/localtip/163449293905648444-7dc7-4c71-9a25-656e98a6a0a0.jpg" alt="Victoria Memorial">
+                <div class="description">
+                    <div class="place-name">Victoria Memorial</div>
+                    <p>A large marble building in Kolkata, dedicated to Queen Victoria.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://media1.thrillophilia.com/filestore/myx0ziz9cm4ynnru0bhwacb66w86_shutterstock_1911230902.jpg?w=400&dpr=2" alt="Charminar">
+                <div class="description">
+                    <div class="place-name">Charminar</div>
+                    <p>A monument and mosque located in Hyderabad, built in 1591.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/73/34.jpg" alt="Gateway of India">
+                <div class="description">
+                    <div class="place-name">Gateway of India</div>
+                    <p>An arch-monument built in the early 20th century in Mumbai.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>"Designed And Developed By Shubh Kalaria"</p>
+    </footer>
+</body>
+</html>
